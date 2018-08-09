@@ -1,11 +1,11 @@
 
 const express 	= require("express");
 const app 	= express();
-const PORT 	= process.env.PORT;
-
-// Socket.io
-const server = require('http').createServer(app);
+const server = require('http').Server(app);
 const io = require('socket.io')(server);
+
+const PORT 	= process.env.PORT || 3000;
+
 
 app.get("/", (req, res) => {
 	res.sendFile(__dirname + '/htmls/index.html');
@@ -17,4 +17,6 @@ io.on('connection', function(socket) {
 	});
 });
 
-app.listen(PORT);
+server.listen(PORT, function() {
+	console.log('listening on *:' + PORT);
+});

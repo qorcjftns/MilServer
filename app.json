@@ -1,0 +1,24 @@
+{
+    "name": "milserver",
+    "description": "Mil Open Source Academy App Server",
+    "website": "https://github.com/socketio/chat-example",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/qorcjftns/MilServer.git"
+    },
+    "success_url": "/",
+    "keywords": [
+      "node",
+      "express",
+      "socket.io",
+      "realtime",
+      "websocket"
+    ],
+    "scripts": {
+    },
+    "addons": [
+    ],
+    "env": {
+      "BUILDPACK_URL": "https://github.com/heroku/heroku-buildpack-nodejs"
+    }
+  }
